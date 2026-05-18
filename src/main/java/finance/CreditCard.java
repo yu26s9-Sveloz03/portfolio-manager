@@ -15,15 +15,15 @@ public class CreditCard implements IValuable {
     }
 
     public void pay(double amount){
-        balance += amount;
+        balance -= amount;
     }
 
     public void charge(double amount){
-        balance -= amount;
+        balance += amount;
     }
 
     @Override
     public double getValue(){
-        return balance;
+        return -balance;
     }
 }
